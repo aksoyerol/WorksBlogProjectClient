@@ -1,11 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <p>Hello World !</p>
-</body>
-</html>
+@model List<BlogListModel>
+<!-- Blog Post -->
+
+  @foreach (var item in Model)
+  {<div class="card mb-4 mt-4">
+          <img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap">
+          <div class="card-body">
+            <h2 class="card-title">@item.Title</h2>
+            <p class="card-text">@item.ShortDescription
+            <a href="#" class="btn btn-primary">Read More &rarr;</a>
+          </div>
+          <div class="card-footer text-muted">
+            Posted on @item.PostedTime
+            <a href="#">Start Bootstrap</a>
+          </div>
+        </div>
+        }
