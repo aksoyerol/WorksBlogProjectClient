@@ -353,3 +353,5 @@ C:\Users\erola\source\repos\WorksBlogProjectClient\bin\Debug\netcoreapp3.1\tr\Mi
 C:\Users\erola\source\repos\WorksBlogProjectClient\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
 C:\Users\erola\source\repos\WorksBlogProjectClient\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
 C:\Users\erola\source\repos\WorksBlogProjectClient\obj\Debug\netcoreapp3.1\WorksBlogProjectClient.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\erola\source\repos\WorksBlogProjectClient\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\CategoryList\Default.cshtml.g.cs
+C:\Users\erola\source\repos\WorksBlogProjectClient\obj\Debug\netcoreapp3.1\Razor\Views\Home\BlogDetail.cshtml.g.cs

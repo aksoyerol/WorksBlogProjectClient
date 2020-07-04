@@ -11,15 +11,13 @@
   <title>Blog Home - Start Bootstrap Template</title>
 
   <!-- Bootstrap core CSS -->
-  <link href="lib/twitter-bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="~/lib/twitter-bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Custom styles for this template -->
-  <link href="css/blog-home.css" rel="stylesheet">
-  <link href="css/_bootswatch.scss">
+  <link href="~/css/blog-home.css" rel="stylesheet">
+  <link href="~/css/_bootswatch.scss">
  </head>
-
 <body>
-
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-info fixed-top">
     <div class="container">
@@ -70,26 +68,8 @@
           </div>
         </div>
 
-        <!-- Categories Widget -->
-        <div class="card my-4">
-          <h5 class="card-header">Categories</h5>
-          <div class="card-body">
-            <div class="row">
-              <div class="col-md-12">
-                <div class="list-group">
-                  
-                    <a class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">Web Design  <span class="badge badge-primary badge-pill">15</span></a>
-                  <a class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">Web Design  <span class="badge badge-primary badge-pill">15</span></a>
-                  <a class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">Web Design  <span class="badge badge-primary badge-pill">15</span></a>
-                  <a class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">Web Design  <span class="badge badge-primary badge-pill">15</span></a>
-                   <a class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">Web Design  <span class="badge badge-primary badge-pill">15</span></a>
-                </div>
-              </div>
-              
-            </div>
-          </div>
-        </div>
-
+        @await Component.InvokeAsync("CategoryList")
+        
         <!-- Side Widget -->
         <div class="card my-4">
           <h5 class="card-header">Side Widget</h5>
@@ -115,9 +95,9 @@
   </footer>
 
   <!-- Bootstrap core JavaScript -->
-  <script src="lib/jquery/jquery.min.js"></script>
-  <script src="lib/twitter-bootstrap/js/bootstrap.min.js"></script>
-  <script src="lib/twitter-bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="~/lib/jquery/jquery.min.js"></script>
+  <script src="~/lib/twitter-bootstrap/js/bootstrap.min.js"></script>
+  <script src="~/lib/twitter-bootstrap/js/bootstrap.bundle.min.js"></script>
 
 </body>
 
