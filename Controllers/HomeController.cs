@@ -6,6 +6,7 @@ namespace WorksBlogProjectClient.Controllers
 {
     public class HomeController : Controller
     {
+        
         private readonly IBlogApiService _blogApiService;
         public HomeController(IBlogApiService blogApiService)
         {

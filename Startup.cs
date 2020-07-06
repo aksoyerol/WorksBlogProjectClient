@@ -18,10 +18,11 @@ namespace WorksBlogProjectClient
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddHttpClient<IBlogApiService,BlogApiManager>();
-            services.AddHttpClient<ICategoryApiService,CategoryApiManager>();
+            services.AddHttpClient<IImageApiService, ImageApiManager>();
+            services.AddHttpClient<IBlogApiService, BlogApiManager>();
+            services.AddHttpClient<ICategoryApiService, CategoryApiManager>();
             services.AddControllersWithViews().AddRazorRuntimeCompilation();
-            
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
