@@ -15,12 +15,34 @@ namespace WorksBlogProjectClient.ApiServices.Concrete
             _httpClient = httpClient;
             _httpClient.BaseAddress = new System.Uri("http://localhost:57240/api/categories/");
         }
+
+
         public async Task<List<CategoryListModel>> GetAllAsync()
         {
             var responseMessage = await _httpClient.GetAsync("");
             if (responseMessage.IsSuccessStatusCode)
             {
                 return JsonConvert.DeserializeObject<List<CategoryListModel>>(await responseMessage.Content.ReadAsStringAsync());
+            }
+            return null;
+        }
+
+        public async Task<List<CategoryWithBlogsCountModel>> GetAllWithBlogsCount()
+        {
+            var responseMessage = await _httpClient.GetAsync("GetWithBlogsCount");
+            if (responseMessage.IsSuccessStatusCode)
+            {
+                return JsonConvert.DeserializeObject<List<CategoryWithBlogsCountModel>>(await responseMessage.Content.ReadAsStringAsync());
+            }
+            return null;
+        }
+
+        public async Task<CategoryListModel> GetByIdAsync(int id)
+        {
+            var responseMessage = await _httpClient.GetAsync($"{id}");
+            if (responseMessage.IsSuccessStatusCode)
+            {
+                return JsonConvert.DeserializeObject<CategoryListModel>(await responseMessage.Content.ReadAsStringAsync());
             }
             return null;
         }

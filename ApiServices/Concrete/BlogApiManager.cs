@@ -35,5 +35,15 @@ namespace WorksBlogProjectClient.ApiServices.Concrete
             }
             return null;
         }
+
+        public async Task<List<BlogListModel>> GetAllByCategoryIdAsync(int id)
+        {
+            var responseMessage = await _httpClient.GetAsync($"GetAllByCategoryId/{id}");
+            if (responseMessage.IsSuccessStatusCode)
+            {
+                return JsonConvert.DeserializeObject<List<BlogListModel>>(await responseMessage.Content.ReadAsStringAsync());
+            }
+            return null;
+        }
     }
 }

@@ -1,6 +1,12 @@
 @model List<BlogListModel>
 <!-- Blog Post -->
-
+@if(ViewBag.ActiveCategory!=null){
+  <div class="alert alert-warning p-3 mt-4 mb-2">Looking for 
+    <b>"<getcategoryname category-id="@(ViewBag.ActiveCategory)"></getcategoryname> "</b>
+     Category
+    </div>
+  
+}
   @foreach (var item in Model)
   {<div class="card mb-4 mt-4">
           <getblogimage id="@item.Id"></getblogimage>

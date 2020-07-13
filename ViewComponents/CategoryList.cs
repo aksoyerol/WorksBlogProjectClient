@@ -13,8 +13,7 @@ namespace WorksBlogProjectClient.ViewComponents
 
         public IViewComponentResult Invoke()
         {
-
-            return View(_categoryApiService.GetAllAsync().Result);
+            return View(_categoryApiService.GetAllWithBlogsCount().Result);
         }
 
     }

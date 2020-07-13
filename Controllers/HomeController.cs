@@ -6,15 +6,20 @@ namespace WorksBlogProjectClient.Controllers
 {
     public class HomeController : Controller
     {
-        
+
         private readonly IBlogApiService _blogApiService;
         public HomeController(IBlogApiService blogApiService)
         {
             _blogApiService = blogApiService;
         }
 
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int? categoryId)
         {
+            if (categoryId.HasValue)
+            {
+                ViewBag.ActiveCategory = (int)categoryId;
+                return View(await _blogApiService.GetAllByCategoryIdAsync(categoryId.Value));
+            }
             return View(await _blogApiService.GetAllAsync());
         }
 
