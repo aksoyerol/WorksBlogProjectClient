@@ -355,3 +355,9 @@ C:\Users\erola\source\repos\WorksBlogProjectClient\bin\Debug\netcoreapp3.1\zh-Ha
 C:\Users\erola\source\repos\WorksBlogProjectClient\obj\Debug\netcoreapp3.1\WorksBlogProjectClient.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\erola\source\repos\WorksBlogProjectClient\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\CategoryList\Default.cshtml.g.cs
 C:\Users\erola\source\repos\WorksBlogProjectClient\obj\Debug\netcoreapp3.1\Razor\Views\Home\BlogDetail.cshtml.g.cs
+C:\Users\erola\source\repos\WorksBlogProjectClient\obj\Debug\netcoreapp3.1\Razor\Views\Account\SignIn.cshtml.g.cs
+C:\Users\erola\source\repos\WorksBlogProjectClient\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Home\Index.cshtml.g.cs
+C:\Users\erola\source\repos\WorksBlogProjectClient\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\_ViewImports.cshtml.g.cs
+C:\Users\erola\source\repos\WorksBlogProjectClient\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\_ViewStart.cshtml.g.cs
+C:\Users\erola\source\repos\WorksBlogProjectClient\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\erola\source\repos\WorksBlogProjectClient\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Blog\Index.cshtml.g.cs

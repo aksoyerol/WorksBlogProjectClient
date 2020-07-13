@@ -18,9 +18,12 @@ namespace WorksBlogProjectClient
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddHttpContextAccessor();
+            services.AddSession();
             services.AddHttpClient<IImageApiService, ImageApiManager>();
             services.AddHttpClient<IBlogApiService, BlogApiManager>();
             services.AddHttpClient<ICategoryApiService, CategoryApiManager>();
+            services.AddHttpClient<IAuthApiService, AuthApiManager>();
             services.AddControllersWithViews().AddRazorRuntimeCompilation();
 
         }
@@ -34,10 +37,11 @@ namespace WorksBlogProjectClient
             }
             app.UseStaticFiles();
             app.UseRouting();
-
+            app.UseSession();
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapDefaultControllerRoute();
+                endpoints.MapControllerRoute(name: "Areas", pattern: "{area}/{controller=Home}/{action=Index}/{id?}");
+                endpoints.MapControllerRoute(name: "default", pattern: "{controller=Home}/{action=Index}/{id?}");
             });
         }
     }
