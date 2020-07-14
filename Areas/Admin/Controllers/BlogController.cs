@@ -26,13 +26,17 @@ namespace WorksBlogProjectClient.Areas.Admin.Controllers
         public IActionResult Create()
         {
             ViewData["Active"] = "blog";
-            return View(new BlogAddModel);
+            return View(new BlogAddModel());
         }
 
         [HttpPost]
         public async Task<IActionResult> Create(BlogAddModel blogAddModel)
         {
-            
+            if (ModelState.IsValid)
+            {
+                await _blogApiService.InsertAsync(blogAddModel);
+                return RedirectToAction("Index","Blog");
+            }
             return View(blogAddModel);
         }
     }

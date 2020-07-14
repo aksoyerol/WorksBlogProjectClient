@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
@@ -56,7 +57,10 @@ namespace WorksBlogProjectClient.ApiServices.Concrete
             MultipartFormDataContent formDataContent = new MultipartFormDataContent();
             if (blogAddModel.FormFile != null)
             {
-                var bytes = await System.IO.File.ReadAllBytesAsync(blogAddModel.FormFile.FileName);
+                var stream = new MemoryStream();
+                await blogAddModel.FormFile.CopyToAsync(stream);
+                var bytes = stream.ToArray();
+                // var bytes = await System.IO.File.ReadAllBytesAsync(blogAddModel.FormFile.FileName);
                 ByteArrayContent byteArrayContent = new ByteArrayContent(bytes);
                 byteArrayContent.Headers.ContentType = new MediaTypeHeaderValue(blogAddModel.FormFile.ContentType);
                 formDataContent.Add(byteArrayContent, nameof(blogAddModel.FormFile), blogAddModel.FormFile.FileName);
@@ -69,8 +73,8 @@ namespace WorksBlogProjectClient.ApiServices.Concrete
             formDataContent.Add(new StringContent(blogAddModel.ShortDescription), nameof(blogAddModel.ShortDescription));
             formDataContent.Add(new StringContent(blogAddModel.Description), nameof(blogAddModel.Description));
             formDataContent.Add(new StringContent(blogAddModel.Title), nameof(blogAddModel.Title));
-            _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Berarer", _httpContextAccesor.HttpContext.Session.GetString("Token"));
-            await _httpClient.PostAsync("", formDataContent);
+            _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", _httpContextAccesor.HttpContext.Session.GetString("Token"));
+            await _httpClient.PostAsync("",formDataContent);
         }
     }
 }
