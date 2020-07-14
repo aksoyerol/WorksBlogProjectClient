@@ -10,5 +10,6 @@ namespace WorksBlogProjectClient.ApiServices.Interfaces
         Task<BlogListModel> GetByIdAsync(int id);
         Task<List<BlogListModel>> GetAllByCategoryIdAsync(int id);
         Task InsertAsync(BlogAddModel blogAddModel);
+        Task UpdateAsync(BlogUpdateModel blogUpdateModel);
     }
 }

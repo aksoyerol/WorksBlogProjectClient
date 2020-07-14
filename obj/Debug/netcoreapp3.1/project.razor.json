@@ -14525,6 +14525,20 @@
               "Common.PropertyName": "Id"
             },
             "BoundAttributeParameters": []
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "image-show-mode",
+            "TypeName": "WorksBlogProjectClient.Enums.ImageShowMode",
+            "IsEnum": true,
+            "IndexerNamePrefix": null,
+            "IndexerTypeName": null,
+            "Documentation": null,
+            "Diagnostics": [],
+            "Metadata": {
+              "Common.PropertyName": "ImageShowMode"
+            },
+            "BoundAttributeParameters": []
           }
         ],
         "AllowedChildTags": [],
@@ -20661,6 +20675,11 @@
     {
       "FilePath": "c:\\Users\\erola\\source\\repos\\WorksBlogProjectClient\\Views\\Shared\\_Layout.cshtml",
       "TargetPath": "Views\\Shared\\_Layout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\erola\\source\\repos\\WorksBlogProjectClient\\Areas\\Admin\\Views\\Blog\\Edit.cshtml",
+      "TargetPath": "Areas\\Admin\\Views\\Blog\\Edit.cshtml",
       "FileKind": "mvc"
     },
     {

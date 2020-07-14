@@ -19,8 +19,15 @@ using WorksBlogProjectClient.Models;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 3 "C:\Users\erola\source\repos\WorksBlogProjectClient\Views\_ViewImports.cshtml"
+using WorksBlogProjectClient.Enums;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"e7b4585d26296d5b708304854ce56d0e82629b0c", @"/Views/Shared/Components/CategoryList/Default.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"b3f1a7f1174f548b1fea5f7a66c0c5cd01eaa59c", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"81e8f441211e519371f59ed47076e1fe15518570", @"/Views/_ViewImports.cshtml")]
     public class Views_Shared_Components_CategoryList_Default : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<List<CategoryWithBlogsCountModel>>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-action", "Index", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -58,7 +65,7 @@ using WorksBlogProjectClient.Models;
 #line hidden
 #nullable disable
             WriteLiteral("                      ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e7b4585d26296d5b708304854ce56d0e82629b0c3987", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e7b4585d26296d5b708304854ce56d0e82629b0c4181", async() => {
 #nullable restore
 #line 14 "C:\Users\erola\source\repos\WorksBlogProjectClient\Views\Shared\Components\CategoryList\Default.cshtml"
                    Write(item.CategoryName);

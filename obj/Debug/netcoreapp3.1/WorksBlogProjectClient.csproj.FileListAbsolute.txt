@@ -362,3 +362,4 @@ C:\Users\erola\source\repos\WorksBlogProjectClient\obj\Debug\netcoreapp3.1\Razor
 C:\Users\erola\source\repos\WorksBlogProjectClient\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Shared\_Layout.cshtml.g.cs
 C:\Users\erola\source\repos\WorksBlogProjectClient\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Blog\Index.cshtml.g.cs
 C:\Users\erola\source\repos\WorksBlogProjectClient\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Blog\Create.cshtml.g.cs
+C:\Users\erola\source\repos\WorksBlogProjectClient\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Blog\Edit.cshtml.g.cs

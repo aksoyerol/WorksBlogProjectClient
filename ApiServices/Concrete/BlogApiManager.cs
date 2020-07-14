@@ -74,7 +74,33 @@ namespace WorksBlogProjectClient.ApiServices.Concrete
             formDataContent.Add(new StringContent(blogAddModel.Description), nameof(blogAddModel.Description));
             formDataContent.Add(new StringContent(blogAddModel.Title), nameof(blogAddModel.Title));
             _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", _httpContextAccesor.HttpContext.Session.GetString("Token"));
-            await _httpClient.PostAsync("",formDataContent);
+            await _httpClient.PostAsync("", formDataContent);
+        }
+
+        public async Task UpdateAsync(BlogUpdateModel blogUpdateModel)
+        {
+            MultipartFormDataContent formDataContent = new MultipartFormDataContent();
+            if (blogUpdateModel.FormFile != null)
+            {
+                var stream = new MemoryStream();
+                await blogUpdateModel.FormFile.CopyToAsync(stream);
+                var bytes = stream.ToArray();
+                // var bytes = await System.IO.File.ReadAllBytesAsync(blogAddModel.FormFile.FileName);
+                ByteArrayContent byteArrayContent = new ByteArrayContent(bytes);
+                byteArrayContent.Headers.ContentType = new MediaTypeHeaderValue(blogUpdateModel.FormFile.ContentType);
+                formDataContent.Add(byteArrayContent, nameof(blogUpdateModel.FormFile), blogUpdateModel.FormFile.FileName);
+            }
+
+            var user = _httpContextAccesor.HttpContext.Session.GetObject<AppUserViewModel>("ActiveUser");
+            blogUpdateModel.AppUserId = user.Id;
+
+            formDataContent.Add(new StringContent(blogUpdateModel.Id.ToString()), nameof(blogUpdateModel.Id));
+            formDataContent.Add(new StringContent(blogUpdateModel.AppUserId.ToString()), nameof(blogUpdateModel.AppUserId));
+            formDataContent.Add(new StringContent(blogUpdateModel.ShortDescription), nameof(blogUpdateModel.ShortDescription));
+            formDataContent.Add(new StringContent(blogUpdateModel.Description), nameof(blogUpdateModel.Description));
+            formDataContent.Add(new StringContent(blogUpdateModel.Title), nameof(blogUpdateModel.Title));
+            _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", _httpContextAccesor.HttpContext.Session.GetString("Token"));
+            await _httpClient.PutAsync($"{blogUpdateModel.Id}", formDataContent);
         }
     }
 }

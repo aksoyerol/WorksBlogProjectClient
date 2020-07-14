@@ -19,8 +19,15 @@ using WorksBlogProjectClient.Models;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 3 "C:\Users\erola\source\repos\WorksBlogProjectClient\Views\_ViewImports.cshtml"
+using WorksBlogProjectClient.Enums;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"afebddafc9280773f5539242ee12eb09d05a4974", @"/Views/Home/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"b3f1a7f1174f548b1fea5f7a66c0c5cd01eaa59c", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"81e8f441211e519371f59ed47076e1fe15518570", @"/Views/_ViewImports.cshtml")]
     public class Views_Home_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<List<BlogListModel>>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-action", "BlogDetail", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -60,7 +67,7 @@ using WorksBlogProjectClient.Models;
 #line hidden
 #nullable disable
             WriteLiteral("  <div class=\"alert alert-warning p-3 mt-4 mb-2\">Looking for \r\n    <b>\"");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("getcategoryname", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "afebddafc9280773f5539242ee12eb09d05a49744162", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("getcategoryname", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "afebddafc9280773f5539242ee12eb09d05a49744356", async() => {
             }
             );
             __WorksBlogProjectClient_TagHelpers_CategoryNameTagHelper = CreateTagHelper<global::WorksBlogProjectClient.TagHelpers.CategoryNameTagHelper>();
@@ -98,7 +105,7 @@ __WorksBlogProjectClient_TagHelpers_CategoryNameTagHelper.CategoryId = (ViewBag.
 #line hidden
 #nullable disable
             WriteLiteral("<div class=\"card mb-4 mt-4\">\r\n          ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("getblogimage", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "afebddafc9280773f5539242ee12eb09d05a49746054", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("getblogimage", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "afebddafc9280773f5539242ee12eb09d05a49746248", async() => {
             }
             );
             __WorksBlogProjectClient_TagHelpers_ImageTagHelper = CreateTagHelper<global::WorksBlogProjectClient.TagHelpers.ImageTagHelper>();
@@ -135,7 +142,7 @@ __WorksBlogProjectClient_TagHelpers_ImageTagHelper.Id = item.Id;
 #line hidden
 #nullable disable
             WriteLiteral("\r\n            ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "afebddafc9280773f5539242ee12eb09d05a49748018", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "afebddafc9280773f5539242ee12eb09d05a49748212", async() => {
                 WriteLiteral("Read More &rarr;");
             }
             );

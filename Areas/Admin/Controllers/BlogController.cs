@@ -35,9 +35,37 @@ namespace WorksBlogProjectClient.Areas.Admin.Controllers
             if (ModelState.IsValid)
             {
                 await _blogApiService.InsertAsync(blogAddModel);
-                return RedirectToAction("Index","Blog");
+                return RedirectToAction("Index", "Blog");
             }
             return View(blogAddModel);
+        }
+
+        public async Task<IActionResult> Edit(int id)
+        {
+            var updatedBlog = await _blogApiService.GetByIdAsync(id);
+            if (updatedBlog != null)
+            {
+                BlogUpdateModel blogModel = new BlogUpdateModel
+                {
+                    ShortDescription = updatedBlog.ShortDescription,
+                    Title = updatedBlog.Title,
+                    Description = updatedBlog.Description,
+                    Id = updatedBlog.Id
+                };
+                return View(blogModel);
+            }
+            return NotFound();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Edit(BlogUpdateModel blogUpdateModel)
+        {
+            if (ModelState.IsValid)
+            {
+                await _blogApiService.UpdateAsync(blogUpdateModel);
+                return RedirectToAction("Index", "Blog");
+            }
+            return View(blogUpdateModel);
         }
     }
 }
