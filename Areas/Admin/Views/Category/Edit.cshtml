@@ -1,0 +1,16 @@
+@model CategoryUpdateModel
+
+<div class="col-md-10 offset-1">
+
+<form asp-action="Edit" method="post" >
+    <input type="hidden" asp-for="@Model.Id"> 
+<div class="form-group">
+    <label asp-for="@Model.Name"></label>
+    <input asp-for="@Model.Name" class="form-control" type="text">
+    <span asp-validation-for="@Model.Name"></span>
+</div>
+
+<button type="submit" class="btn btn-success btn-block">Save</button>
+<div asp-validation-summary="ModelOnly"></div>
+</form>
+</div>

@@ -102,5 +102,13 @@ namespace WorksBlogProjectClient.ApiServices.Concrete
             _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", _httpContextAccesor.HttpContext.Session.GetString("Token"));
             await _httpClient.PutAsync($"{blogUpdateModel.Id}", formDataContent);
         }
+
+        public async Task DeleteAsync(int id){
+            
+            _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer",_httpContextAccesor.HttpContext.Session.GetString("Token"));
+            await _httpClient.DeleteAsync($"{id}");
+            
+
+        }
     }
 }
