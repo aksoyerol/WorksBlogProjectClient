@@ -21,7 +21,7 @@
 
   <!-- Custom styles for this template -->
   <link href="~/css/simple-sidebar.css" rel="stylesheet">
-
+  @RenderSection("Css",false)
 </head>
 
 <body>
@@ -96,6 +96,7 @@
     });
   </script>
 
+@RenderSection("JavaScript",false)
 </body>
 
 </html>

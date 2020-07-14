@@ -1,4 +1,8 @@
 @model BlogAddModel
+
+@section Css{
+<link rel="stylesheet" href="~/Trumbowyg/dist/ui/trumbowyg.min.css"/>
+}
 <div class="col-md-10 offset-1">
 
 <form asp-action="Create" method="POST" enctype="multipart/form-data">
@@ -16,7 +20,7 @@
 
 <div class="form-group">
     <label asp-for="@Model.Description"></label>
-    <textarea asp-for="@Model.Description" class="form-control"></textarea>
+    <textarea id="textEditor" asp-for="@Model.Description" class="form-control"></textarea>
     <span class="text-danger" asp-validation-for="@Model.Description"></span>
 </div>
 
@@ -29,3 +33,10 @@
 <button type="submit" class="btn btn-success btn-block">Save</button>
 </form>
 </div>
+
+@section JavaScript{
+    <script src="~/Trumbowyg/dist/trumbowyg.min.js"></script>
+    <script>
+        $("#textEditor").trumbowyg();
+    </script>
+}
